@@ -38,6 +38,12 @@
     ////////////////////////////////////////////////////////////////////////
     // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
 
+    createCollectable(type.db, 200, 550, 6, 0.7);
+
+    createCollectable(type.grace, 600, 450, 6, 0.7);
+
+    createCollectable(type.kennedi, 500, 100, 6, 0.7);
+
     // example:
     createCollectable(type.steve, 200, 170, 6, 0.7);
 
