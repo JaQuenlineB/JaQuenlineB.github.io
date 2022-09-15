@@ -44,10 +44,9 @@
     createPlatform(55, 460, 0.5);
     /Tiny platform/
 
-    createPlatform(350, 345, 0.2);
+    createPlatform(340, 345, 0.2);
     /Small platform/
     
-
     /*
      * ground : here, we create a floor. Given the width of of the platform
      * asset, giving it a scaleX and scaleY of 2 will stretch it across the
