@@ -8,13 +8,13 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgba(158, 89, 236, 0.767);
 			font-size: 300%;
 			text-align: center;
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 400px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -61,6 +61,8 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
+
+			var positionX = (0);
 			
 
 			
@@ -70,7 +72,9 @@
 			turn it around! 
 			*/
 			function update() {
-				
+				/* We need to increase positionX value by 10 */
+				positionX = 0 + 10;
+				moveBoxTo(positionX);
 
 			};
 
@@ -80,6 +84,7 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = 0;ss
 				
 
 
