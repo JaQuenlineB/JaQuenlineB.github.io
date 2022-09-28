@@ -78,8 +78,13 @@
 				moveBoxTop(boardWidth);
 
 			if (positionX > boardWidth) {
-				speed = -speed;
+				console.log ("speed = -speed");
 			}
+
+			if (positionX < minimum) {
+				speed = positive;
+			}
+
 
 			};
 
