@@ -76,13 +76,13 @@
 				positionX = positionX + speed;
 				moveBoxTo(positionX); 
 				
-			if (positionX > boardWidth) {
-				speed = -speed;
-			}
-			
-			if (positionX < minimum) {
-				-speed = speed;
-			}
+				if (positionX > boardWidth) {
+					speed = -speed;
+				}
+
+				if (positionX < minimum) {
+					speed = ;
+				}
 
 			};
 
@@ -95,9 +95,14 @@
 				positionX = 0;
 				points = points + 1;
 				changeBoxText(points);
+
+			if (speed >= 0) {
 				speed = speed + 3;
+			}
 
-
+			else if (speed <= 0) {
+				speed = speed - 3;
+			}
 			};
 		})();
 	</script>
