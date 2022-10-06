@@ -80,8 +80,8 @@
 					speed = -speed;
 				}
 
-				if (positionX < minimum) {
-					speed = -speed * -speed;
+				if (positionX < 0) {
+					speed = -speed;
 				}
 
 			};
@@ -96,13 +96,14 @@
 				points = points + 1;
 				changeBoxText(points);
 
-			if (speed >= 0) {
-				speed = speed + 3;
-			}
+				if (speed > 0) {
+					speed = speed + 3;
+				}
+				
+				else if (speed < 0) {
+					speed = speed - 3;
+				}
 
-			else if (speed <= 0) {
-				speed = speed - 3;
-			}
 			};
 		})();
 	</script>
