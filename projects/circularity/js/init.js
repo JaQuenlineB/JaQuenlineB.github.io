@@ -27,17 +27,15 @@ var init = function (window) {
         function drawCircle() {
         // Code to draw a circle
             circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-            physikz.addRandomVelocity(circle, canvas, 5, 5);
+            physikz.addRandomVelocity(circle, canvas, 3, 3);
             view.addChild(circle);
             circles.push(circle);
         }
 
         // TODO 3 / 7 : Call the drawCircle() function 
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
+        for (var count = 0; count < 100; count++) {
+            
+        }
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -77,7 +75,6 @@ var init = function (window) {
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            var rightEdge = circle.x + circle.radius;
 
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
@@ -89,11 +86,14 @@ var init = function (window) {
             }
 
             // if the circle has gone UP past the screen then place it on the BOTTOM
-            if ( x < 0 ) {
-                circle.x = 0;
+            if ( circle.y < 0) {
+                circle.y = canvas.height;
             }
 
             // if the circle has gone past the LEFT side of the screen then place it on the RIGHT
+            if ( circle.x < 0) {
+                circle.x = canvas.width;
+            }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
