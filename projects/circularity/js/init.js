@@ -33,8 +33,11 @@ var init = function (window) {
         }
 
         // TODO 3 / 7 : Call the drawCircle() function 
-        for (var count = 0; count < 100; count++) {
-            
+        for (var count = 1; count <= 100; count++) {
+            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+            physikz.addRandomVelocity(circle, canvas, 3, 3);
+            view.addChild(circle);
+            circles.push(circle);
         }
 
         ////////////////////////////////////////////////////////////
